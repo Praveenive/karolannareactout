@@ -1,4 +1,3 @@
-
 import "./App.css"; 
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -93,11 +92,10 @@ export default function App() {
       <div className="main"><h1>Shop in style</h1><p>With this shop hompeage template</p></div>
       </div>
    
-      <Container>
+      <Container  style={{ marginTop: "10px"}}>
       <Row>
       {data.map((product,idx)=>(
-        <Col xs={3}
-       key={idx}>
+        <Col xs={12} sm={6} md={4} lg={3} key={idx} style={{ marginBottom: "10px"}}>
          <Product
          key={idx}
          prod={product}
@@ -131,7 +129,7 @@ function Product({prod,count,setCount})
   return(
 <div >
   
-<Card style={{ width: '18rem' }}>
+<Card>
       <Card.Img variant="top" src={prod.productImage} />
       <Card.Body>
         <Card.Title>{prod.productName}</Card.Title>
@@ -139,7 +137,7 @@ function Product({prod,count,setCount})
         <Card.Text>{prod.price}</Card.Text>
         
        {!show ?
-        <Button variant="primary"   onClick={addTocart}>Add to cart</Button>  : 
+        <Button variant="outline-primary"   onClick={addTocart}>Add to cart</Button>  : 
         <Button variant="danger"   onClick={removeCart}>Remove to cart</Button>}
       </Card.Body>
     </Card>
