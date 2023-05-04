@@ -1,0 +1,28 @@
+.main-content{
+  display: flex;
+  flex-direction: row;
+}
+.left-content{
+  border:1px solid red;
+  width: 20vw;
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: blue;
+  align-items: center;
+
+}
+button{
+  width:100px;
+  height:30px;
+  padding:15px;;
+}
+.right-content{
+  border:1px solid blue;
+  width:30vw;
+  height:75vh;
+  margin-left: 5px;
+  text-align: center;
+  
+}
